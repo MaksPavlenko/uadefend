@@ -1,0 +1,14 @@
+@import './BenefitsText/BenefitsText'
+
+.benefits
+  &__container
+    @include flex()
+    border: $solid
+    width: 100%
+    border-bottom: none
+    height: 550px
+    @include media-breakpoint-down(xl)
+      height: 475px
+    @include media-breakpoint-down(lg)
+      flex-direction: column
+      height: auto

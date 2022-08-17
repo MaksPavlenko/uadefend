@@ -1,0 +1,168 @@
+.bank-ui__item
+  width: 100%
+  &:last-child
+    .bank-ui__wrapper
+      margin-bottom: 0
+    
+
+.bank-ui__title-wrapper
+  margin-bottom: 20px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  @media screen and ( max-width: $page-wrapper )
+    margin-bottom: calc( 6px + (20 - 6) * ((100vw - 320px) / (1440 - 320)))
+
+
+.bank-ui__title
+  font-family: $text
+  font-style: normal
+  font-weight: 700
+  font-size: 14px
+  line-height: 110% 
+  text-transform: uppercase
+  color: $dark
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 10px + (14 - 10) * ((100vw - 320px) / (1440 - 320)))
+
+.bank-ui__icon
+  width: 20px
+  height: 20px
+  display: none
+  opacity: 0
+  transition: opacity .25s ease-in-out
+  @include media-breakpoint-down(sm)
+    display: block
+  &.is-show
+    opacity: 1
+
+
+.bank-ui__wrapper
+  width: 100%
+  position: relative
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  background: transparent
+  overflow: hidden
+  border: $solid
+  margin-bottom: 30px
+  @include media-breakpoint-down(sm)
+    margin-bottom: 12px
+ 
+
+
+.text-wrapper
+  padding: 10px 20px
+  flex-basis: 90%
+  min-height: 60px
+  display: flex
+  align-items: center
+  @include media-breakpoint-down(sm)
+    flex-basis: 100%
+    padding: 12px 12px
+    min-height: 46px
+  // @media screen and ( max-width: $page-wrapper )
+  //   padding: 0 calc( 10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)))
+  
+
+.text
+  font-family: $text
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 110%
+  text-transform: uppercase
+  color: $dark
+  word-break: break-word
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 12px + (16 - 12) * ((100vw - 320px) / (1440 - 320)))
+
+.copy-button
+  height: 64px
+  width: 64px
+  flex-shrink: 0
+  // flex-basis: 10%
+  @include flex-center()
+  cursor: pointer
+  border-left: $solid
+  transition: transform .3s ease-in-out
+  svg 
+    width: 26px
+    height: 26px
+  @include media-breakpoint-down(sm)
+    display: none
+
+
+
+.scan-ui__wrapper
+  padding-top: 40px
+  padding-top: calc( 30px + (40 - 30) * ((100vw - 320px) / (1440 - 320)))
+  .bank-ui__title
+    width: 60%
+    @include media-breakpoint-down(md)
+      width: 100%
+
+.bank-scan__container
+  display: flex
+  padding-top: 20px
+  @media screen and ( max-width: 400px )
+    flex-direction: column
+
+.scan-image__wrapper
+  height: 100%
+  flex-basis: 25%
+  padding: 20px
+  border: $solid
+  @include flex-center()
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)))
+  @media screen and ( max-width: 400px )
+    padding: 40px
+
+
+.scan-image
+  width: 100%
+  height: 100%
+
+.bank-scan__warning
+  flex-basis: 75%
+  display: flex
+  flex-direction: column
+  border: $solid
+  border-bottom: none
+  margin-left: 30px
+  height: auto
+  @media screen and ( max-width: $page-wrapper )
+    margin-left: calc( 15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)))
+  @media screen and ( max-width: 400px )
+    margin-left: 0
+    margin-top: 20px
+
+.bank-scan__warning-text
+  padding: 0 40px
+  border-bottom: $solid
+  height: 50%
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  @media screen and ( max-width: $page-wrapper )
+    padding: 0 calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @media screen and ( max-width: 400px )
+    padding: 20px
+
+.warning-text, .warning-text__span
+  font-family: $text
+  font-size: 16px
+  line-height: 110%
+  color: $dark
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 13px + (16 - 13) * ((100vw - 320px) / (1440 - 320)))
+
+.warning-text__span
+  font-style: bold
+  font-weight: 700
+
+.warning-text
+  font-style: normal
+  font-weight: 400

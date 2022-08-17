@@ -1,0 +1,20 @@
+@import './ArticleAside/ArticleAside'
+@import './ArticleContentItems/ArticleContentItems'
+@import './ArticlePagination/ArticlePagination'
+
+.article-content__wrapper
+  padding-top: 60px
+  @media screen and ( max-width: $page-wrapper )
+    padding-top: calc( 30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)))
+  .grid-container
+    .column
+      &:first-child 
+        @include media-breakpoint-down(lg)
+          order: 2
+  .grid-container
+    .column
+      &:last-child
+        @include media-breakpoint-down(lg)
+          order: 1
+
+

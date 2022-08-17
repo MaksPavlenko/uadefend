@@ -1,0 +1,50 @@
+.aside-slider
+  display: block
+  width: 100% !important
+  max-width: 100% !important
+  margin-top: 20px
+  border: $solid
+  @include media-breakpoint-down(lg)
+    margin-top: 40px
+  .slick-track
+    display: flex !important
+    align-items: stretch
+    justify-content: flex-start
+  .slick-slide
+    height: auto
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    div
+      &:first-child 
+        height: 100%
+
+
+//////// Slider Buttons ///////
+
+.aside-slider__buttons
+  width: 100%
+  display: flex
+  align-items: center
+  // margin-top: 20px
+  border: $solid
+  border-top: none
+  height: 60px  
+  .slider-button
+    padding: 0 !important
+    svg
+      width: 81px
+      height: auto
+
+.slick-active + .slick-active
+  .aside-slide
+    @include media-breakpoint-down(lg)
+      border-left: $solid
+
+.aside-slide
+  padding: 40px
+  .gallery-default__image
+    width: 100%
+    height: 100%
+    cursor: pointer
+      

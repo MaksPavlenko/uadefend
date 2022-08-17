@@ -1,0 +1,15 @@
+@import './DonateInfo/DonateInfo'
+@import './Bank/Bank'
+@import './Crypto/Crypto'
+
+.donate-item__section
+  opacity: 0
+  transform: translateY(100px)
+  .section-ui__wrapper
+    &:last-child
+      margin-bottom: 0
+  .simple-title__wrapper
+    padding-right: 20px
+    @media screen and ( max-width: 344px )
+      padding-right: 0
+  

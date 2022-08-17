@@ -1,0 +1,36 @@
+
+.faq-aside
+  display: flex
+  flex-direction: column
+  @include media-breakpoint-down(lg)
+    padding-top: 90px
+
+.faq-aside__header
+  display: flex
+  border: $solid
+  border-right: none
+  justify-content: space-between
+
+.faq-aside__title
+  padding: 16px 20px
+  
+.faq-aside__title-text
+  font-family: $main
+  font-style: normal
+  font-weight: 700
+  font-size: 24px
+  line-height: 24px
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  color: $black
+  
+.faq-aside__icon
+  border-left: $solid
+  border-right: $solid
+  padding: 19px 20px
+  @include flex-center()
+
+.faq__round-slide
+  border: $solid
+  margin-top: 30px

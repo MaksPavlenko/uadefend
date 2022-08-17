@@ -1,0 +1,34 @@
+@import './RoundCardDonnat/RoundCardDonnat'
+@import './RoundCardSlider/RoundCardSlider'
+@import './RoundCardInfo/RoundCardInfo'
+@import './RoundCardDescr/RoundCardDescr'
+
+.round-card
+  display: flex
+  flex-direction: column
+  padding-top: 140px
+  padding-bottom: 90px
+  opacity: 0
+  transform: translateY(100px)
+  @include media-breakpoint-down(sm)
+    padding-top: 90px
+  @media screen and ( max-width: $page-wrapper )
+    padding-top: calc( 120px + (140 - 120) * ((100vw - 320px) / (1440 - 320)))
+    padding-bottom: calc( 45px + (90 - 45) * ((100vw - 320px) / (1440 - 320)))
+  // @include media-breakpoint-down(lg)
+   
+.round-card__header,
+.round-card__footer
+  display: flex
+  @include media-breakpoint-down(lg)
+    flex-direction: column
+
+// .round-card__header
+//   @include media-breakpoint-down(lg)
+//     flex-direction: column-reverse
+
+
+.popap
+  display: none
+  &.is-open
+    display: block

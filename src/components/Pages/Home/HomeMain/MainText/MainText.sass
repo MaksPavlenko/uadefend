@@ -1,0 +1,63 @@
+.home-main__text-section
+  flex-basis: 50%
+  @include media-breakpoint-down(lg)
+    flex-basis: 100%
+    display: flex
+    justify-content: center
+
+.text-section__description-wrapper
+  @include media-breakpoint-down(lg)
+    width: 60%
+  @include media-breakpoint-down(sm)
+    width: 70%
+  @media (min-width: 320px) and (max-width: 450px)
+    width: 100%
+  
+  
+
+.text-section__description-wrapper_descr
+  padding-bottom: 40px
+  overflow: hidden
+  @media screen and ( max-width: $page-wrapper )
+    padding-bottom: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(lg)
+    text-align: center
+
+
+.text-section__description-wrapper_title
+  overflow: hidden
+  @include media-breakpoint-down(lg)
+    text-align: center
+
+
+.text-section__description
+  white-space: pre-line
+  font-family: $text
+  font-style: normal
+  font-weight: 500
+  font-size: 18px
+  line-height: 15px
+  color: $black
+  opacity: 0
+  transform: translateY(100px)
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 14px + (15 - 14) * ((100vw - 320px) / (1440 - 320)))
+    line-height: calc(16px + (18 - 16) * ((100vw - 320px) / (1440 - 320)))
+
+.text-section__title
+  white-space: pre-line
+  font-family: $main
+  font-style: normal
+  font-weight: 700
+  font-size: 90px
+  line-height: 100%
+  color: $black
+  text-transform: uppercase
+  opacity: 0
+  transform: translateY(100px)
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 35px + (90 - 35) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(lg)
+    font-size: calc( 30px + (55 - 30) * ((100vw - 320px) / (992 - 320)))
+
+

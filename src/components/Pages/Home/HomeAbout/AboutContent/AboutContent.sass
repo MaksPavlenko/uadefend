@@ -1,0 +1,13 @@
+.about-content
+  display: grid
+  grid-template-columns: 3fr 3fr
+  column-gap: 40px
+  padding-right: 40px
+  @include media-breakpoint-down(lg)
+    grid-template-columns: 1fr
+
+.about-content__item
+  padding-bottom: 40px
+  @include media-breakpoint-down(md)
+    padding-bottom: 30px
+

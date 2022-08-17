@@ -1,0 +1,22 @@
+.about-aside
+  padding-right: 20%
+  @include media-breakpoint-down(xl)
+    padding-right: 40px
+  @include media-breakpoint-down(lg)
+    padding-right: 0
+  
+.aside-title
+  font-family: $main
+  font-style: normal
+  font-weight: 700
+  font-size: 40px
+  line-height: 40px
+  text-transform: uppercase
+  color: #303030
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+    line-height: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+
+.aside-title__wrapper
+  @include media-breakpoint-down(lg)
+    padding-bottom: 40px

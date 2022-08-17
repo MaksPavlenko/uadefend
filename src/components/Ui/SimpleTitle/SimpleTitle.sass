@@ -1,0 +1,10 @@
+.simple-title
+  font-family: $main
+  font-style: normal
+  font-weight: 400
+  font-size: 40px
+  line-height: 100%
+  text-transform: uppercase
+  color: $dark
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 26px + (40 - 26) * ((100vw - 320px) / (1440 - 320)))

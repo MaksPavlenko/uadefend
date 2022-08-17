@@ -1,0 +1,259 @@
+/////// FONTS ////////
+
+$main: 'Spaceland-example', 'Arial', sans-serif
+$text: 'Mulish-example', sans-serif
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: local($fname), url($furl) format('woff')
+		font-display: swap // Uncomment to initially display system fonts
+@include font('Spaceland-example', normal, 700, '../fonts/title/Spaceland-Nine.woff2')
+@include font('Mulish-example', normal, 400, '../fonts/Mulish-Regular/Mulish-Regular.woff2')
+@include font('Mulish-example', normal, 500, '../fonts/Mulish-Medium/Mulish-Medium.woff2')
+@include font('Mulish-example', normal, 700, '../fonts/Mulish-Bold/Mulish-Bold.woff2')
+
+///////  COLORS ///////
+
+$black-300: #010101
+$black-400: #111111
+$black-500: #222222
+$black-600: #222222
+$gray-500: #707070
+
+/////////// new ////////
+
+// $bg-main: #F4F7F6
+$bg-main: #E7E7E7
+$bg-light: #EEEEEE
+// $black: #202121
+$black: #303030
+$dark: #303030
+$gray: rgba($black, 0.5)
+$blue: #1B65AA
+$yellow: #FBDB72
+// $stroke: #E6EAEA
+$stroke: #D9D9D9
+$dark-gray: #777777
+$gray-bag: #E4E4E4
+
+
+
+
+//////// BORDERS ///////
+
+$dash: 1px dashed $black-500
+$solid: 1px solid rgba(48, 48, 48, 0.15)
+
+$shadow: 0px 4px 15px #0000001a
+
+
+//////// SIZES ///////
+
+$page-wrapper: 1920px
+
+//////// TRANSITIONS ///////
+
+$cubic: cubic-bezier(0.24, 0.4, 0, 1)
+
+//////// STYLE MIXINS /////////
+
+@mixin relative()
+	position: relative
+
+%relative
+	position: relative
+
+@mixin fixed()
+	position: fixed
+
+%fixed
+	position: fixed
+
+@mixin absolute()
+	position: absolute
+
+%absolute
+	position: absolute	
+
+%width100
+	width: 100%
+
+%height100
+	height: 100%
+
+%height100vh
+	height: 100vh
+
+@mixin absolute-center()
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+%absolute-center
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+@mixin block()
+	display: block
+
+%block
+	display: block
+
+@mixin inline-block()
+	display: inline-block
+
+%inline-block
+	display: inline-block
+
+@mixin none()
+	display: none
+
+%none
+	display: none
+
+%grid
+	display: grid
+
+@mixin hidden()
+	overflow: hidden
+
+%hidden
+	overflow: hidden
+
+@mixin uppercase()
+	text-transform: uppercase
+
+%uppercase
+	text-transform: uppercase
+
+%bold
+	font-weight: 700
+
+%regular
+	font-weight: 400
+
+@mixin text-center()
+	text-align: center
+
+%text-center
+	text-align: center
+
+@mixin text-left()
+	text-align: left
+
+%text-left
+	text-align: left
+
+@mixin text-right()
+	text-align: right
+
+%text-right
+	text-align: right
+
+@mixin cursor()
+	cursor: pointer
+
+%cursor
+	cursor: pointer
+
+@mixin default-bg()
+	background: $black-400
+	border: $dash
+
+%default-bg
+	background: $black-400
+	border: $dash
+
+//////// Flex mixins ///////
+	
+@mixin flex()
+	display: flex
+	// @extend %flex
+
+%flex
+	display: flex
+
+@mixin items-center()
+	align-items: center
+
+%items-center
+	align-items: center
+
+@mixin items-start()
+	align-items: flex-start
+
+%items-start
+	align-items: flex-start
+
+@mixin items-end()
+	align-items: flex-end
+
+%items-end
+	align-items: flex-end
+
+@mixin justify-between()
+	justify-content: space-between
+
+%justify-between
+	justify-content: space-between
+
+@mixin justify-start()
+	justify-content: flex-start
+
+%justify-start
+	justify-content: flex-start
+
+@mixin justify-end()
+	justify-content: flex-end
+
+%justify-end
+	justify-content: flex-end
+
+@mixin justify-center()
+	justify-content: center
+
+%justify-center
+	justify-content: center
+	
+@mixin flex-center()
+  display: flex
+  align-items: center
+  justify-content: center
+
+%flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin flex-column()
+  display: flex
+  flex-direction: column
+
+@mixin flex()
+  display: flex
+
+@mixin absolute-center()
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+
+@mixin hover-social()
+  @include media-breakpoint-up(lg)
+    &:hover
+      svg 
+        display: none
+      .in-text
+        display: block
+
+
+
+
+
+

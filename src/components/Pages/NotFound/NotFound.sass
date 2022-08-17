@@ -1,0 +1,93 @@
+
+.not-found__wrapper
+  padding-top: 140px
+  padding-bottom: 90px
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: stretch
+  @media screen and ( max-width: $page-wrapper )
+    padding-bottom: calc( 45px + (90 - 45) * ((100vw - 320px) / (1440 - 320)))
+  
+
+.not-found__image-wrapper
+  @include flex-center()
+  padding-bottom: 30px
+
+.not-found__image
+  width: 50%
+  @include media-breakpoint-down(md)
+    width: 70%
+
+
+.not-found__title-wrapper
+  padding-top: 30px
+  padding-bottom: 25px
+  @include flex-center()
+
+.not-found__title
+  font-family: $main
+  font-style: normal
+  font-weight: 700
+  font-size: 35px
+  line-height: 40px
+  text-align: center
+  text-transform: uppercase
+  color: $black
+  white-space: pre-wrap
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 24px + (30 - 24) * ((100vw - 320px) / (1440 - 320)))
+    
+.not-found__bottom,
+.not-found__icon-wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.not-found__bottom
+  @include media-breakpoint-down(md)
+    flex-direction: column
+  .social-default-wrapper
+    @include media-breakpoint-down(md)
+      display: block
+      padding-top: 60px
+    @include media-breakpoint-down(sm)
+      // padding-top: 15px
+  
+
+.not-found__icon-wrapper
+  height: 73px
+  border: $solid
+  position: relative
+  overflow: hidden
+  @media (any-hover: hover)
+    &:hover
+      .button-bg__white
+        transform: translateY(0)
+
+.not-found__icon
+  padding: 30px
+  border-right: $solid
+  @include flex-center()
+
+.not-found__btn-title_wrapper
+  padding: 30px
+  @include flex-center()
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)))
+
+
+.not-found__btn-title
+  font-family: $text
+  font-style: normal
+  font-weight: 700
+  font-size: 12px
+  line-height: 12px
+  text-align: center
+  text-transform: uppercase
+  color: #000000
+  position: relative
+
+.icon-non
+  position: relative

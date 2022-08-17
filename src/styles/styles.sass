@@ -1,0 +1,119 @@
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'
+  
+@import './config'
+
+@import '../components/Layout/layout'
+@import '../components/Ui/Ui'
+
+
+/////////////// Pages ////////////
+
+@import '../components/Pages/Home/Home'
+@import '../components/Pages/RoundsCatalog/RoundsCatalog'
+@import '../components/Pages/Blog/Blog'
+@import '../components/Pages/About/About'
+@import '../components/Pages/RoundCard/RoundCard'
+@import '../components/Pages/Article/Article'
+@import '../components/Pages/NotFound/NotFound'
+@import '../components/Pages/Thanks/Thanks'
+@import '../components/Pages/Donate/Donate'
+@import '../components/Pages/Terms/Terms'
+
+/////////// Main Style ///////////
+
+html
+  width: 100%
+  max-width: 100%
+  // height: -webkit-fill-available
+  height: 100%
+  backface-visibility: hidden
+  
+body
+  position: relative
+  width: 100%
+  max-width: 100%
+  // min-height: 100vh
+  // min-height: -webkit-fill-available
+  overflow-x: hidden
+  scroll-behavior: smooth
+  overscroll-behavior-y: none
+  // font-smooth: antialiased
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-rendering: optimizeSpeed
+  -webkit-text-rendering: optimizeSpeed
+  font-family: $main
+  background: $bg-main
+  color: $black
+  font-size: 16px
+
+
+ul
+  padding: 0
+  margin: 0
+  li
+    list-style: none
+
+button
+  background-color: transparent
+  border: none
+  outline: none
+  padding: 0
+  &:focus, &:focus, &:active
+    outline: none
+
+a
+  outline: none
+  text-decoration: none
+  &:hover, &:focus, &:active
+    text-decoration: none
+
+p, h1, h2, h3, h4,
+  margin: 0
+
+.h1
+  font-size: 110px
+  line-height: 100%
+  text-transform: uppercase
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 45px + (90 - 45) * ((100vw - 320px) / (1440 - 320)))
+
+
+.page-wrapper
+  width: 100%
+  max-width: $page-wrapper
+  margin: 0 auto
+  padding: 0 6%
+  @include media-breakpoint-down(lg)
+    padding: 0 4%
+  @include media-breakpoint-down(sm)
+    padding: 0 20px
+
+.section
+  padding-top: 125px  
+  padding-bottom: 125px
+  @media screen and ( max-width: $page-wrapper )
+    padding-top: calc( 30px + (125 - 30) * ((100vw - 320px) / (1440 - 320)))
+    padding-bottom: calc( 30px + (125 - 30) * ((100vw - 320px) / (1440 - 320)))
+
+
+.content-wrapper
+  width: 100%
+  max-width: 1920px
+  margin: 0 auto
+  padding: 0 11%
+  @include media-breakpoint-down(xl)
+    padding: 0 8%
+  @include media-breakpoint-down(lg)
+    padding: 0 11%
+  @include media-breakpoint-down(md)
+    padding: 0 6%
+
+
+.load-faid
+  opacity: 0
+  transform: translateY(100px)
+
+
+  

@@ -1,0 +1,51 @@
+.about-counter__wrapper
+  padding-top: 70px
+  padding-bottom: 30px
+  @media screen and ( max-width: $page-wrapper )
+    padding-top: calc( 30px + (70 - 30) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(lg)
+    display: none
+ 
+ 
+.footer-logo__text
+  @include media-breakpoint-down(sm)
+    line-height: 1
+  
+.about-counter
+  display: flex
+  border: 1px solid $black
+
+.about-counter__count
+  padding: 30px 26px
+  border-right: 1px solid $black
+  flex-basis: 35%
+  display: flex
+  justify-content: center
+  @include media-breakpoint-down(lg)
+    flex-basis: 20%
+    
+.about-counter__title--wrapper
+  align-self: center
+  width: 100%
+  display: flex
+  justify-content: center
+  flex-basis: 65%
+  @include media-breakpoint-down(lg)
+    flex-basis: 80%
+
+
+.about-counter__title
+  font-family: $main
+  font-style: normal
+  font-weight: 700
+  font-size: 32px
+  line-height: 32px
+  text-align: center
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  color: $black
+  white-space: pre-wrap
+  @include media-breakpoint-down(lg)
+    white-space: nowrap
+  @include media-breakpoint-down(sm)
+    white-space: pre-wrap

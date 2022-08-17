@@ -1,0 +1,82 @@
+.rounds-aside
+  padding-top: 60px
+  @media screen and ( max-width: $page-wrapper )
+    padding-top: calc( 30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)))
+
+.filter-list
+  display: block
+  @include media-breakpoint-down(lg)
+    display: none
+  &.is-hidden
+    display: block
+    // @include media-breakpoint-down(lg)
+    //   display: none
+
+.filter-item
+  &:last-child
+    .filter-button
+      border-bottom: $solid
+  &:first-child
+    .filter-button
+      border-top: none
+    
+
+
+.filter-button
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between  
+  border: $solid
+  border-bottom: transparent
+  padding-left: 30px
+  transition: background .3s $cubic
+  @include media-breakpoint-down(xl)
+    padding-left: 20px
+  &.is-active, &[aria-current="page"]
+    // background: $bg-light
+    .filter-button__marker--check
+      background: $black
+      border: 1px solid $black
+    .filter-button__title
+      color: $black
+  // @media (any-hover: hover)
+  //   &:hover
+  //     background: $bg-light
+      .filter-button__title
+        color: $black
+  &.filter-button__toggle
+    border-bottom: $solid
+
+.filter-button__title--wrapper
+  display: flex
+  align-items: center
+
+.filter-button__title
+  font-family: $text
+  font-size: 12px
+  line-height: 18px
+  font-weight: 700
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  color: $black
+  transition: color .3s $cubic
+  @include media-breakpoint-down(xl)
+    font-size: 11px
+  &.filter-button__title--toggle
+    font-family: $main
+    font-size: 24px
+
+.filter-button__marker
+  width: 60px
+  height: 60px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-left: $solid
+
+.filter-button__marker--check
+  display: block
+  width: 10px
+  height: 10px
+  border: $solid

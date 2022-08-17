@@ -1,0 +1,168 @@
+.needs-items
+  display: grid
+  grid-template-columns: 6fr 6fr
+  grid-template-rows: 2fr
+  @include media-breakpoint-down(md)
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr
+
+
+
+///////// ITEM STYLE ////////
+
+.needs-item
+  position: relative
+  border: $solid
+  border-bottom: none
+  overflow: hidden
+  cursor: pointer
+  &:nth-child(odd)
+    border-right: none
+    @include media-breakpoint-down(md)
+      border-right: $solid
+  &:nth-child(5), &:nth-child(6)
+    border-bottom: $solid
+  &:nth-child(5)
+    @include media-breakpoint-down(md)
+      border-bottom: none
+
+
+
+////////// HOVER STYLE ////////////
+
+.needs-item
+  &:hover
+    .needs-item__header
+      transition: transform 1.2s $cubic .2s, opacity 0.6s $cubic .2s
+      transform: translateX(100%)
+      opacity: 0
+    .needs-item__title--wrapper
+      transform: translateX(100%)
+    .needs-item__icon--wrapper
+      transform: translateX(100%)
+      &::before
+        transition: transform .6s $cubic .2s
+        transform: translate(-50%, -50%) scale(0)
+    .needs-item__icon
+      transition: transform .4s $cubic
+      transform: scale(0.8)
+    .needs-item__footer
+      transition: transform 1.2s $cubic .2s, opacity 1s $cubic .2s
+      transform: translateX(0)
+      opacity: 1
+    .needs-item__descr
+      transform: translateX(0)
+
+
+
+////////// HEADER STYLE //////////
+    
+.needs-item__header
+  display: flex
+  align-items: center
+  height: 140px
+  opacity: 1
+  transition: transform 1.2s $cubic .2s, opacity 0.6s $cubic .2s
+  @include media-breakpoint-down(sm)
+    padding-left: 10px
+
+.needs-item__title--wrapper
+  width: calc(100% - 140px)
+  padding: 20px 60px
+  transition: transform .9s, $cubic 
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 30px + (60 - 30) * ((100vw - 992px) / (1440 - 992)))
+  @include media-breakpoint-down(lg)
+    padding: 20px
+  @include media-breakpoint-down(md)
+    padding: calc( 20px + (60 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(sm)
+    width: calc(100% - 80px)
+    padding-left: 0
+
+.needs-item__title
+  font-weight: 700
+  font-size: 30px
+  line-height: 100%
+  text-transform: uppercase
+  color: $black
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 18px + (30 - 18) * ((100vw - 320px) / (1440 - 320)))
+
+
+.needs-item__icon--wrapper
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 140px
+  height: 140px
+  border-right: $solid
+  transition: transform .9s $cubic .2s
+  @include media-breakpoint-down(sm)
+    width: 80px
+    height: 80px
+    border: none
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%) scale(1)
+    width: 100px
+    height: 100px
+    background: #eee
+    z-index: 0
+    transition: transform .4s $cubic .4
+    display: none
+    @include media-breakpoint-down(sm)
+      display: none
+
+.needs-item__icon
+  width: 40px
+  height: 40px
+  transition: transform .4s $cubic
+  @include media-breakpoint-down(sm)
+    width: 34px
+    height: 34px
+
+
+
+/////////// FOOTER STYLE /////////
+
+.needs-item__footer
+  position: absolute
+  top: 0
+  left: 0
+  height: 140px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  padding: 20px
+  opacity: 0
+  transform: translateX(-100%)
+  transition: transform 1.2s $cubic .2s, opacity .5s $cubic .3s
+
+.needs-item__descr--wrapper
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  overflow: hidden
+  padding: 20px
+  @include media-breakpoint-down(lg)
+    padding: 0
+
+.needs-item__descr
+  font-family: $text
+  font-weight: 400
+  font-size: 16px
+  line-height: 120%
+  transform: translateX(-60px)
+  transition: transform .7s, $cubic .6s
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)))
+  
+  

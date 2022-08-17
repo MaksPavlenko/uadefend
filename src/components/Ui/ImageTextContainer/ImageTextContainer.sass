@@ -1,0 +1,43 @@
+.about
+  &__image-text_title
+    font-family: $main
+    font-size: 50px
+    color: $white
+    font-style: normal
+    font-weight: 600
+    text-align: center
+    text-transform: uppercase
+    white-space: nowrap
+    @media screen and ( max-width: $page-wrapper )
+      font-size: calc( 25px + (50 - 12) * ((100vw - 320px) / (1440 - 320)))
+  &__image-text_description
+    font-family: $main
+    font-size: 14px
+    color: $white
+    font-style: normal
+    font-weight: normal
+    text-align: center
+    text-transform: uppercase
+    @media screen and ( max-width: $page-wrapper )
+      font-size: calc( 12px + (14 - 12) * ((100vw - 320px) / (1440 - 320)))
+  &__image-text
+    @include absolute-center()
+  
+.benefits
+  &__img-wrapper
+    padding: 40px
+    border-bottom: $solid
+    flex-basis: 50%
+    position: relative
+    @media screen and ( max-width: $page-wrapper )
+      padding: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+    @include media-breakpoint-down(lg)
+      border-bottom: none
+      border-right: none
+  &__image
+    width: 100%
+    height: 100%
+    transition: transform 200ms ease-in-out
+    // &:hover
+      // transform: scale(1.05)
+    

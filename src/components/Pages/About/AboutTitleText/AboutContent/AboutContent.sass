@@ -1,0 +1,46 @@
+.about-text__wrapper
+  padding: 60px
+  padding-right: 0
+  border-left: $solid
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(lg)
+    padding: 60px 0
+    border-left: none
+  .footer-logo__wrapper
+    width: 50%
+    border: none
+    @include media-breakpoint-down(xl)
+      width: 100%
+    @include media-breakpoint-down(lg)
+      width: 100%
+      border: none
+      .footer-logo__text
+        white-space: nowrap
+
+  .title-text__container
+    padding-bottom: 40px
+    .title-text__descr
+      padding-top: 60px
+      font-family: $text
+      font-style: normal
+      font-weight: 400
+      font-size: 15px
+      line-height: 20px
+      color: $black
+      white-space: pre-wrap
+      @media screen and ( max-width: $page-wrapper )
+        padding-top: calc( 30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)))
+    .title-text__title
+      font-family: $main
+      font-style: normal
+      font-weight: 700
+      font-size: 60px
+      line-height: 60px
+      text-transform: uppercase
+      color: $black
+      white-space: pre-wrap
+      @media screen and ( max-width: $page-wrapper )
+        font-size: calc( 30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)))
+        line-height: calc( 30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)))
+

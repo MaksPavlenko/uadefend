@@ -1,0 +1,57 @@
+.footer-left
+  &__adress-wrapper
+    @include flex()
+    align-items: center
+    justify-content: start
+    height: 240px
+    border-bottom: $solid
+    @include media-breakpoint-down(lg)
+      border: none
+      @include flex-center()
+
+.button-map
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  &__adress
+    padding-top: 32px
+    text-decoration: none
+    font-family: $text
+    font-style: normal
+    font-weight: 600
+    font-size: 0.75em
+    line-height: 0.75em
+    color: $dark-gray
+    text-align: start
+    @include flex()
+    justify-content: space-between
+    border-bottom: 1px solid $dark-gray
+    padding-bottom: 6px
+  &__adress-top
+    text-decoration: none
+    font-family: $main
+    font-style: normal
+    font-weight: 700
+    font-size: 1.375em
+    line-height: 100%
+    color: $black
+    white-space: pre-line
+    text-align: start
+    text-transform: uppercase
+    &:hover
+      color: $gray
+    @include media-breakpoint-down(lg)
+      text-align: center
+
+.button-map__adress
+  &:hover
+    color: $gray
+  @include media-breakpoint-down(lg)
+      display: none
+      
+.item-adress
+  padding: 35px
+  padding-right: 0
+  padding-left: 0
+  &:last-child
+    padding-top: 0

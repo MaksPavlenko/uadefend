@@ -1,0 +1,363 @@
+// ButtonUi & ButtonLinkUi
+
+.button-ui__button
+  width: 100%
+  height: 100%
+  @include flex-center()
+  position: relative
+  overflow: hidden
+  @media (any-hover: hover)
+    &:hover
+      .button-bg__white
+        transform: translateY(0)
+  @include media-breakpoint-down(lg)
+    padding: 30px 60px
+  @include media-breakpoint-down(sm)
+    padding: 30px
+.button-plus__text-container
+  border: 1px solid $black
+  width: 100%
+  height: 100%
+  flex-basis: 80%
+  @include flex-center()
+  padding: 5px
+
+.button-plus__icon
+  position: relative
+
+.button-plus__icon-container
+  border: 1px solid $black
+  border-left: none
+  height: 100%
+  width: 100%
+  flex-basis: 20%
+  @include flex-center()
+
+.button-plus__ui
+  width: 100%
+  height: 70px
+  @include flex-center()
+  position: relative
+  overflow: hidden
+  @media (any-hover: hover)
+    &:hover
+      .button-bg__white
+        transform: translateY(0)
+
+.button-ui__text
+  z-index: 1
+  font-family: $text
+  font-size: 13px
+  line-height: 13px
+  text-transform: uppercase
+  font-style: normal
+  font-weight: 700
+  text-align: center
+  letter-spacing: 0.04em
+  color: $black
+  transition: color .3s cubic-bezier(0.24, 0.4, 0, 1)
+
+.button-ui__icon
+  z-index: 1
+  margin-left: 30px
+  transition: transform .3s cubic-bezier(0.24, 0.4, 0, 1)
+  rect
+    transition: fill .3s cubic-bezier(0.24, 0.4, 0, 1)
+    margin-left: 15px
+  @include media-breakpoint-down(sm)
+    margin-left: 20px
+
+.order__button_order-button
+  width: 100%
+  height: 100%
+  text-align: center
+  white-space: nowrap
+  position: relative
+  overflow: hidden
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: $black
+    transform: translateX(101%)
+    transition: transform .3s ease-in-out
+    z-index: 0
+  @media (any-hover: hover)
+    &:hover
+      .button-content
+        right: 50%
+        transform: translate(50%, -50%)
+      &::before
+        transform: translateX(0)
+      .order_button-text
+        color: $white
+        text-align: center
+      svg
+        rect
+          fill: $white
+        path
+          fill: $white
+
+.button-content
+  position: absolute
+  right: 0
+  top: 50%
+  transform: translateY(-50%)
+  transition: all .3s ease-in-out .05s
+  @include media-breakpoint-down(lg)
+    right: 50%
+    top: 50%
+    transform: translate(50%, -50%)
+    
+
+
+.order_button-text
+  padding-right: 27px
+  font-style: normal
+  font-family: $main
+  font-weight: 600
+  font-size: 12px
+  line-height: 11px
+  text-transform: uppercase
+  color: $black
+  text-align: right
+  transition: all .3s ease-in-out
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 11px + (12 - 11) * ((100vw - 320px) / (1440 - 320)))
+    padding-right: calc( 19px + (27 - 19) * ((100vw - 320px) / (1440 - 320)))
+
+.plus-order
+  width: 18px
+  height: 18px
+
+.up-catalog
+  width: 11px
+  height: 11px 
+
+// SampleNextArrow & SamplePrevArrow
+
+
+.slider-buttons
+  width: 33.35%
+  justify-content: space-around
+  align-items: center
+  @include flex()
+  @include media-breakpoint-down(lg)
+    width: 100%
+    height: 100%
+    flex-basis: 100%
+
+.slider-button__arrow-wrapper
+  z-index: 1
+
+
+.slider-button
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+  overflow: hidden
+  &__prev
+    border-right: $solid
+  @include media-breakpoint-down(lg)
+    padding: 20px
+
+.slider-button__prev
+  @media (any-hover: hover)
+    &:hover
+      .slider-button__arrow
+        transform: translate(-100%, -50%)
+        opacity: 0
+        &:last-child
+          transform: translate(0, -50%)
+          opacity: 1
+
+
+.slider-button__next
+  @media (any-hover: hover)
+    &:hover
+      .slider-button__arrow
+        transform: translate(100%, -50%)
+        opacity: 0
+        &:first-child
+          transform: translate(0, -50%)
+          opacity: 1
+    
+
+.slider-button__arrow--wrapper
+  position: relative
+  display: block
+  width: 100px
+  height: 40px
+  overflow: hidden
+  @media screen and ( max-width: $page-wrapper )
+    width: calc( 80px + (100 - 80) * ((100vw - 320px) / (1440 - 320)))
+  .slider-button__arrow
+    display: block
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100px
+    transition: transform .6s cubic-bezier(.86,-0.01,.28,1), opacity .6s cubic-bezier(.86,-0.01,.28,1)
+    @media screen and ( max-width: $page-wrapper )
+      width: calc( 80px + (100 - 80) * ((100vw - 320px) / (1440 - 320)))
+    &--prev
+      transform: translate(0, -50%)
+      &:last-child
+        transform: translate(100%, -50%)
+        opacity: 0
+    &--next
+      transform: translate(0, -50%)
+      &:first-child
+        transform: translate(-100%, -50%)
+        opacity: 0
+
+
+//////////// DEFAULT BUTTON LINK ////////////
+
+.default-button__link
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+  overflow: hidden
+  &--aside
+    .default-button__wrapper
+      width: 100%
+      justify-content: space-between
+    .default-button__icon--external
+      width: 70px
+      height: 70px
+      display: flex
+      align-items: center
+      justify-content: center
+      border-left: 1px solid $black
+    .default-button__title--wrapper
+      width: calc(100% - 70px)
+      text-align: center
+    .default-button__title
+      margin-right: 0
+    .default-button__icon--wrapper
+      width: 16px
+      height: 16px
+    .default-button__icon
+      width: 16px
+      height: 16px
+    
+
+.default__button--bg
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: #eee
+  transform: translateY(100%)
+  transition: transform .6s cubic-bezier(.86,-0.01,.28,1)
+  display: none
+
+.default-button__wrapper
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  @include media-breakpoint-down(md)
+    width: 100%
+    justify-content: space-between
+
+.default-button__title--wrapper
+  display: block
+  height: 18px
+  overflow: hidden
+  @include media-breakpoint-down(md)
+    width: calc(100% - 70px)
+    text-align: center
+
+.default-button__title
+  display: block
+  font-family: $text
+  font-size: 14px
+  line-height: 18px
+  font-weight: 700
+  letter-spacing: 0.04em
+  text-transform: uppercase
+  color: $black
+  text-shadow: 0px 18px 0px $black
+  margin-right: 20px
+  transition: transform .4s cubic-bezier(.86,-0.01,.28,1)
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 12px + (14 - 12) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(xl)
+    font-size: 12px
+  @include media-breakpoint-down(lg)
+    font-size: calc( 12px + (14 - 12) * ((100vw - 320px) / (1440 - 320)))
+
+
+.default-button__icon--external
+  @include media-breakpoint-down(md)
+    width: 70px
+    height: 70px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-left: 1px solid $black
+
+.default-button__icon--wrapper
+  display: block
+  width: 11px
+  height: 11px
+  overflow: hidden
+
+.default-button__icon
+  display: block
+  width: 11px
+  height: 11px
+  transition: transform .4s cubic-bezier(.86,-0.01,.28,1)
+  &:last-child
+    transform: translateX(-100%)
+  &--plus
+    &:last-child
+      transform: translateX(0)
+
+
+
+//////////// DEFAULTBUTTONLINK HOVER STYLE //////////// 
+
+.default-button__link
+  @media (any-hover: hover)
+    &:hover
+      .default__button--bg
+        transform: translateY(-100%)
+      .default-button__title
+        transform: translateY(-18px)
+      .default-button__icon
+        transform: translate3d(11px, -11px, 0)
+        &:last-child
+          transform: translate3d(0px, -11px, 0)
+
+.default-button__link      
+  &--aside
+    @media (any-hover: hover)
+      &:hover
+        .default-button__icon
+          transform: translate3d(16px, -16px, 0)
+          &:last-child
+            transform: translate3d(0px, -16px, 0)
+
+
+.default-button__link          
+  @media (any-hover: hover)
+    &:hover
+      .default-button__icon--plus
+        transform: translate3d(0, 0, 0) rotate(90deg) !important
+        &:last-child
+          transform: translate3d(0, 0, 0) rotate(90deg) !important
+          
+

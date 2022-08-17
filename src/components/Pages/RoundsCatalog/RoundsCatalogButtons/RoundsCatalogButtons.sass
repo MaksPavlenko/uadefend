@@ -1,0 +1,34 @@
+.toggle-button__list
+  display: flex
+  @include media-breakpoint-down(sm)
+    display: none
+
+.toggle-button__item
+  margin-right: 20px
+  &:last-child
+    margin-right: 0
+  
+.toggle-button
+  width: 70px
+  height: 70px
+  display: flex
+  align-items: center
+  justify-content: center
+  border: $solid
+  svg
+    width: 20px
+    @media screen and ( max-width: $page-wrapper )
+      width: calc( 14px + (20 - 14) * ((100vw - 320px) / (1440 - 320)))
+    path
+      fill: $black
+  @media screen and ( max-width: $page-wrapper )
+    width: calc( 40px + (70 - 40) * ((100vw - 320px) / (1440 - 320)))
+  @media screen and ( max-width: $page-wrapper )
+    height: calc( 40px + (70 - 40) * ((100vw - 320px) / (1440 - 320)))
+  &.is-active
+    background: $bg-light
+    border: $bg-light
+    box-shadow: $shadow
+    svg
+      path
+        fill: $black

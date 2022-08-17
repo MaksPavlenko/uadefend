@@ -1,0 +1,31 @@
+@import  './AsideShare/AsideShare'
+.article-aside__wrap
+  display: flex
+  flex-direction: column
+  @include media-breakpoint-down(lg)
+    flex-direction: column-reverse
+
+.theme__button-wrapper
+  display: flex
+  justify-content: space-between
+  margin-bottom: 20px
+  @include media-breakpoint-down(lg)
+    margin-bottom: 0
+    padding-top: 30px
+
+.theme-button
+  @include flex-center()
+  flex-basis: 50%
+  height: 73px
+  border: $solid
+  &.is-active
+    border: 1px solid $black
+
+.theme-button-right
+  border-left: none
+
+.article-aside__wrapper
+  @include media-breakpoint-down(lg)
+    padding-top: 70px
+  @include media-breakpoint-down(md)
+    padding-top: 40px

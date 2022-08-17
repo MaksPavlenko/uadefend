@@ -1,0 +1,15 @@
+@import './AboutFaq/AboutFaq'
+@import './FaqAside/FaqAside'
+
+.home-faq
+  padding-top: 90px
+  padding-bottom: 90px
+  @media screen and ( max-width: $page-wrapper )
+    padding-top: calc( 45px + (90 - 45) * ((100vw - 320px) / (1440 - 320)))
+    padding-bottom: calc( 45px + (90 - 45) * ((100vw - 320px) / (1440 - 320)))
+
+.home-faq__wrapper
+  .grid-container
+    @include media-breakpoint-down(lg)
+      display: flex
+      flex-direction: column-reverse

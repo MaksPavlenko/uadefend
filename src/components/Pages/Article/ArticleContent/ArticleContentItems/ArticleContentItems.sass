@@ -1,0 +1,15 @@
+$padding_x: calc( 20px + (60 - 20) * ((100vw - 320px) / (1440 - 320)))
+$padding_y: calc( 10px + (30 - 10) * ((100vw - 320px) / (1440 - 320)))
+
+.article-content__items
+  background: rgba(#eee, .5)
+  display: grid
+  grid-template-columns: 1fr
+  width: 100%
+  padding: 30px 60px
+  opacity: 0
+  // transform: translateY(100px)
+  &.is-light
+    background: #eeeeee
+  @media screen and ( max-width: $page-wrapper )
+    padding: $padding_y $padding_x

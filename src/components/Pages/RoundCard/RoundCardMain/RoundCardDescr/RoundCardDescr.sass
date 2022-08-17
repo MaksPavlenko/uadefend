@@ -1,0 +1,27 @@
+.description__container
+  width: 100%
+  border: $solid
+  margin-top: 90px
+  @include media-breakpoint-down(lg)
+    border: $solid
+    margin-top: 30px
+
+.specifications__accordion-right
+  padding: 40px
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(sm)
+    padding: 20px 
+
+.description__item-descr
+  white-space: pre-wrap
+  font-family: $text
+  font-style: normal
+  font-weight: 400
+  font-size: 15px
+  line-height: 20px
+  padding: 40px
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(sm)
+    padding: 20px

@@ -1,0 +1,21 @@
+.gallery-default__wrapper
+  padding: 40px
+  cursor: pointer
+  transition: transform .3s ease-in-out
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @media (any-hover: hover)
+    &:hover
+      transform: scale(0.9)
+
+.gallery-default__bg
+  @include flex-center()
+  background: rgba(#e7e7e7, .4)
+  padding: 40px
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+  
+.gallery-defaults__img-wrapper
+  width: 60%
+  height: auto !important
+

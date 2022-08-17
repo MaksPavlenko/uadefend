@@ -1,0 +1,73 @@
+
+.modal-header
+  position: relative
+  width: 100%
+  display: flex 
+  align-items: flex-start
+  justify-content: space-between
+  padding-top: 80px
+  z-index: 2
+  // opacity: 0
+  overflow: hidden
+  @media screen and ( max-width: $page-wrapper )
+    padding-top: calc( 20px + (80 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(md)
+    flex-direction: column-reverse
+    align-items: flex-start
+    padding-top: 20px
+    
+
+
+.modal-title
+  font-size: 50px
+  line-height: 100%
+  text-transform: uppercase
+  font-weight: 700
+  width: 60%
+  opacity: 0
+  transform: translateX(-100%)
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 24px + (50 - 24) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(lg)
+    width: 70%
+  @include media-breakpoint-down(md)
+    width: 100%
+    margin-top: 40px
+  @include media-breakpoint-down(sm)
+    margin-top: 30px
+
+.modal-close__wrapper
+  opacity: 0
+  @include media-breakpoint-down(md)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    border: $solid
+    padding-left: 20px
+
+.modal-close__title
+  font-family: $text
+  font-size: 12px
+  font-weight: 700
+  text-transform: uppercase
+  display: none
+  @include media-breakpoint-down(md)
+    display: block
+  
+
+.modal-close
+  @extend %relative 
+  @extend %flex-center
+  width: 80px
+  height: 80px
+  padding: 0
+  @extend %cursor
+  border: $solid
+  @include media-breakpoint-down(md)
+    width: 60px
+    height: 60px
+    border: none
+    border-left: $solid
+  //   width: calc(33.33% + 1px)
+  //   height: 100%

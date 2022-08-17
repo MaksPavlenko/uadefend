@@ -1,0 +1,32 @@
+.call-phone__list
+  position: relative
+
+.call-phone__item
+  width: 100%
+  border-bottom: $solid
+  overflow: hidden
+  border-color: transparent
+  transition: border-color .3s, transform .3s cubic-bezier(0.24, 0.4, 0, 1)
+  &:first-child
+    border-top: $solid
+    border-color: transparent
+
+.call-phone__item-link
+  display: block
+  width: 100%
+  padding: 15px 10px
+  text-align: center
+  font-family: $text
+  font-size: 14px
+  line-height: 100%
+  font-weight: 700
+  text-transform: uppercase
+  color: $black
+  transform: translateY(-100%)
+  opacity: 0
+  transition: color .3s, opacity .3s, transform .3s cubic-bezier(0.24, 0.4, 0, 1)
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 12px + (14 - 12) * ((100vw - 320px) / (1440 - 320)))
+  @media (any-hover: hover)
+    &:hover
+      color: $gray

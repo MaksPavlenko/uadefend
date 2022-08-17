@@ -1,0 +1,19 @@
+@import './BlogItemDefault/BlogItemDefault'
+
+.blog-items__wrapper
+  border: $solid
+  border-left: none
+  border-bottom: none
+  display: grid
+  grid-template-columns: 6fr 6fr
+  grid-template-rows: 1fr
+  margin-top: 60px
+  opacity: 0
+  transform: translateY(100px)
+  @media screen and ( max-width: $page-wrapper )
+    margin-top: calc( 30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(sm)
+    grid-template-columns: 1fr
+  .blog-item__wrapper
+    border-left: $solid
+    border-bottom: $solid

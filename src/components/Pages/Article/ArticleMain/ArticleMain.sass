@@ -1,0 +1,65 @@
+
+.article-main__rite-content
+  height: 100%
+  border: $solid
+
+
+.article-main__date-title
+  font-family: $main
+  font-style: normal
+  font-weight: 700
+  font-size: 50px
+  line-height: 40px
+  text-transform: uppercase
+  color: $black
+  width: 100%
+  text-align: center
+  padding: 40px 95px
+  border-bottom: $solid
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 30px + (50 - 30) * ((100vw - 320px) / (1440 - 320)))
+    line-height: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(lg)
+    padding: 30px 50px
+    font-size: 35px
+    line-height: 20px
+  @include media-breakpoint-down(sm)
+    font-size: 30px
+    line-height: 20px
+
+
+.article-main__date-marker
+  font-family: $text
+  font-style: normal
+  font-weight: 700
+  font-size: 14px
+  line-height: 20px
+  text-transform: uppercase
+  color: $black
+  width: 100%
+  text-align: center
+  padding: 18px 95px
+  @include flex-center()
+  @include media-breakpoint-down(lg)
+    padding: 18px 50px
+    font-size: 12px
+    font-size: 12px
+
+
+.main-default__left
+  &.article-main__title
+    flex-basis: 50%
+    @include media-breakpoint-down(md)
+      padding-bottom: 40px
+
+.h1
+  &.article-main__title
+    font-size: 60px
+    line-height: 60px
+    color: $black
+    white-space: pre-wrap
+    @media screen and ( max-width: $page-wrapper )
+      font-size: calc( 30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)))
+      line-height: calc(30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)))
+
+

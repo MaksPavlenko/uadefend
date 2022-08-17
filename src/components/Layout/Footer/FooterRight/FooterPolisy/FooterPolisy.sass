@@ -1,0 +1,49 @@
+.footer-right
+  &__confidentiality
+    height: 120px
+    width: 100%
+    @include flex-center()
+    @include media-breakpoint-down(lg)
+      text-align: center
+      border-left: $solid
+      border-right: $solid
+  &__confidentiality-container
+    @include flex-column()
+    justify-content: start
+    align-items: center
+    height: 100%
+
+
+.link
+  font-family: $text
+  font-style: normal
+  font-weight: 600
+  font-size: 12px
+  line-height: 20px
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  color: $black
+  &:hover
+    color: $gray
+
+.card-link
+  z-index: 1
+
+.card-container
+  height: 55px
+  width: 82px
+  @include flex-center()
+  padding: 19px
+  // border: $solid
+  cursor: pointer
+  background: $bg-light
+  &__left
+    margin-right: 22px
+
+// .card-container
+//   position: relative
+//   overflow: hidden
+//   @media (any-hover: hover)
+//     &:hover
+//       .button-bg__white
+//         transform: translateY(0)

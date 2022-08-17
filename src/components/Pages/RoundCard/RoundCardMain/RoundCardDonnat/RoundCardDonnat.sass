@@ -1,0 +1,24 @@
+@import './DonnatFooter/DonnatFooter'
+@import './DonnatHeader/DonnatHeader'
+
+.roundCard-donat
+  border: $solid
+  padding: 40px
+  flex-basis: 50%
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(lg)
+    padding: 0
+    border: none
+
+.roundCard-donat__wrapper
+  border: $solid
+  padding: 40px
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+  .item-default__price--container
+    padding: 16px 0
+
+
+
+  // .roundCard-donat__marker

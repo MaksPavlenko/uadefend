@@ -1,0 +1,121 @@
+.open-round__slide-wrapper
+  cursor: pointer
+  &:hover
+    .order__slider-title
+      color: $blue
+
+.open-round__slide-image_wrapper
+  position: relative
+  overflow: hidden
+  padding: 40px
+  border: $solid
+  border-right: none
+
+.open-round__slide-image
+  &:hover
+    transform: scale(1.03)
+    transition: transform 200ms ease-in-out
+
+.over
+  background: $black
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background: rgba(0, 0, 0, 0.35)
+
+.open-round__slide-icon
+  position: absolute
+  top: 30px
+  left: 30px
+
+.close-round__slide-text
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-family: $main
+  font-style: normal
+  font-weight: 700
+  font-size: 24px
+  line-height: 24px
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  color: $gray-bag
+
+.open-round__slide-footer
+  text-align: center
+  // border-right: $solid
+  border-left: $solid
+  border-bottom: $solid
+  padding: 30px 30px 40px 30px
+  @include flex-center()
+  flex-direction: column
+
+.slide-footer__price-container
+  display: flex
+  justify-content: space-between
+  width: 100%
+  padding: 0 0 30px 0
+
+.price-current,
+.price-to,
+.price-total,
+.price-procent
+  font-family: $main
+  font-style: normal
+  font-weight: 700
+  font-size: 24px
+  line-height: 24px
+  text-transform: uppercase
+
+.price-current,
+.price-procent
+  color: $black
+
+.price-to,
+.price-total
+  color: $gray
+
+.slide-footer__line
+  width: 100%
+  height: 3px
+  position: relative
+
+.slide-footer__line-total
+  height: 3px
+  width: 100%
+  background-color: $stroke
+
+.slide-footer__line-current
+  height: 3px
+  left: 0
+  background: linear-gradient(90deg, #006CDD 31.77%, #FCD400 73.44%)
+  position: absolute
+  left: 0
+  top: 0
+
+.open-round__slider-title
+  cursor: pointer
+  font-style: normal
+  font-family: $text
+  font-weight: 500
+  font-size: 16px
+  line-height: 20px
+  color: $black
+  text-align: left
+  height: 100%
+  width: 100%
+  padding: 30px 0 0 0
+  @include flex-center()
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 11px + (16 - 11) * ((100vw - 320px) / (1440 - 320)))
+
+.slick-active + .slick-active + .slick-active
+  .open-round__slide
+    .open-round__slide-wrapper
+      border-right: $solid

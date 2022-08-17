@@ -1,0 +1,89 @@
+.donat-footer
+  padding-top: 40px 
+
+.donat-footer__items-wrapper
+  // padding-bottom: 40px
+
+
+.donat-footer__items
+  display: grid
+  grid-template-columns: repeat(4, 3fr)
+  gap: 20px
+  @include media-breakpoint-down(sm)
+    gap: 10px
+
+.donat-footer__item
+  // padding: 15px 20px
+  &:last-child
+    grid-column-start: 3
+    grid-column-end: 5
+
+
+// .donat-footer__item .is-active
+//   background: $yellow
+
+.donat-button,
+.donat-input
+  width: 100%
+  height: 50px
+  font-family: $text
+  font-style: normal
+  font-weight: 700
+  font-size: 14px
+  line-height: 14px
+  text-transform: uppercase
+  color: $black
+  border: $solid
+  &.is-active
+    border: 1px solid $black
+  @include media-breakpoint-down(sm)
+    font-size: 11px
+
+
+
+
+.donat-input
+  background: transparent
+  border: $solid
+  outline: none
+  text-decoration: none
+  text-align: center
+  &:hover, &:focus
+    text-decoration: none
+  &::placeholder
+    color: $black
+
+.donat-footer__button-title
+  font-family: $text
+  font-style: normal
+  font-weight: 700
+  font-size: 14px
+  line-height: 14px
+  letter-spacing: 0.04em
+  text-transform: uppercase
+  color: $black
+  z-index: 2
+  @include media-breakpoint-down(sm)
+    font-size: 12px
+    
+  
+
+.donat-footer__button
+  margin-top: 40px
+  width: 100%
+  height: 80px
+  background: $bg-light
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1)
+  @include flex-center()
+
+
+
+.donat-footer__disable
+  font-family: $text
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 20px
+  color: $black
+  white-space: pre-wrap
+

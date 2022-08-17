@@ -1,0 +1,39 @@
+$paddingY: calc( 10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)))
+$paddingX: calc( 12px + (25 - 12) * ((100vw - 320px) / (1440 - 320)))
+
+.main-thanks__wrapper
+  display: flex
+  align-items: stretch
+  border: $solid
+  @include media-breakpoint-down(md)
+    display: none
+
+.main-thanks__emblem--wrapper
+  padding: 20px 25px
+  border-right: $solid
+  display: flex
+  align-items: center
+  justify-content: center
+  @media screen and ( max-width: $page-wrapper )
+    padding: $paddingY $paddingX
+
+.main-thanks__emblem
+  width: 30px
+  @media screen and ( max-width: $page-wrapper )
+    width: calc( 20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)))
+
+.main-thanks__text--wrapper
+  padding: 20px 25px
+  display: flex
+  align-items: center
+  @media screen and ( max-width: $page-wrapper )
+    padding: $paddingY $paddingX
+
+.main-thanks__text
+  font-size: 24px
+  line-height: 110%
+  font-weight: 700
+  text-transform: uppercase
+  white-space: pre-wrap
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 18px + (24 - 18) * ((100vw - 320px) / (1440 - 320)))

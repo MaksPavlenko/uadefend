@@ -1,0 +1,101 @@
+.navigation-header
+  height: 100px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  position: relative
+  @include media-breakpoint-down(md)
+    height: 140px
+    flex-direction: column-reverse
+    align-items: flex-end
+
+////////// LANG ///////////
+
+.navigation-header__lang--wrapper
+  height: 100%
+  padding: 0 30px
+  border-right: $solid
+  opacity: 0
+  @include media-breakpoint-down(md)
+    width: 100%
+    border-top: $solid
+    border-right: none
+    padding: 0
+
+////////// CLOSE //////////
+
+.navigation__close
+  @extend %relative 
+  @extend %flex-center
+  width: 100px
+  height: 100px
+  padding: 0
+  @extend %cursor
+  border-left: $solid
+  opacity: 0
+  @include media-breakpoint-down(md)
+    width: calc(33.33% + 1px)
+    height: 100%
+
+.close__lines
+  width: 30px
+  height: 30px
+  @extend %relative 
+  transition: all 500ms cubic-bezier(0.24, 0.4, 0, 1) 440ms
+  transform: rotate(45deg)
+
+.close__line
+  @extend %absolute 
+  background: $black
+  &.line-a-1
+    top: 0
+    left: 50%
+    width: 1px
+    height: 30px
+    transition: transform 480ms cubic-bezier(0.24, 0.4, 0, 1) 150ms
+    transform: translateX(-50%) translateZ(-2px)
+    transform-origin: bottom center
+  &.line-a-2
+    left: 0
+    top: 50%
+    width: 30px
+    height: 1px
+    transition: transform 480ms cubic-bezier(0.24, 0.4, 0, 1) 250ms
+    transform: translateX(0) translateZ(-2px)
+  &.line-b-1
+    top: 0
+    left: 50%
+    width: 1px
+    height: 30px
+    transition: transform 350ms cubic-bezier(0.6, 0, 0.4, 1)
+    transform: translateZ(-1px) translateX(-50%)  translateY(-80%) scaleY(0)
+  &.line-b-2
+    left: 0
+    top: 50%
+    height: 1px
+    width: 30px
+    transition: transform 350ms cubic-bezier(0.6, 0, 0.4, 1) 100ms
+    transform: translateZ(-1px) translateX(-50%) scaleX(0)
+    transform-origin: center left
+
+    
+///////// HOVER STYLE /////////
+
+.navigation__close, .modal-close
+  @media (any-hover: hover)
+    &:hover
+      .close__lines
+        .close__line
+          &.line-a-1
+            transform: translateZ(-1px) translateX(50%) scaleY(0)
+            transition: transform 400ms cubic-bezier(0.24, 0.4, 0, 1)
+          &.line-a-2
+            transform: translateX(50%) scaleX(0)
+            transition: transform 400ms cubic-bezier(0.24, 0.4, 0, 1) 100ms       
+          &.line-b-1
+            transform: translateZ(-1px) translateX(-50%) translateY(0%) scaleY(1)
+            transition: transform 500ms cubic-bezier(0.24, 0.4, 0, 1) 110ms       
+          &.line-b-2
+            transform: translateZ(-1px) translateX(0) scaleX(1)
+            transition: transform 500ms cubic-bezier(0.24, 0.4, 0, 1) 210ms

@@ -1,0 +1,58 @@
+.item-default__header
+  position: relative
+  height: 340px !important
+  padding: 40px
+  padding-bottom: 0
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+    padding-bottom: 0
+    height: calc( 200px + (270 - 200) * ((100vw - 992px) / (1440 - 992))) !important
+  @include media-breakpoint-down(lg)
+    height: calc( 140px + (300 - 140) * ((100vw - 320px) / (992 - 320))) !important
+  @include media-breakpoint-down(sm)
+    height: calc( 200px + (350 - 200) * ((100vw - 320px) / (576 - 320))) !important
+
+.item-default__image--container
+  position: relative
+  overflow: hidden
+  height: 100%
+  // height: 340px !important
+  // @media screen and ( max-width: $page-wrapper )
+  //   height: calc( 200px + (270 - 200) * ((100vw - 992px) / (1440 - 992))) !important
+  // @include media-breakpoint-down(lg)
+  //   height: calc( 140px + (300 - 140) * ((100vw - 320px) / (992 - 320))) !important
+  // @include media-breakpoint-down(sm)
+  //   height: calc( 200px + (350 - 200) * ((100vw - 320px) / (576 - 320))) !important
+
+.item-default__image
+  // background: rgba($stroke, .2)
+  transition: transform .3s ease-in-out
+
+.item-default__icon
+  width: 20px
+  height: auto
+  position: absolute
+  mix-blend-mode: difference
+  path
+    fill: #eeeeee !important
+  @media screen and ( max-width: $page-wrapper )
+    left: calc( 10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)))
+    top: calc( 10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)))
+  
+
+
+.item-default__alert
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-family: $text
+  font-size: 14px 
+  line-height: 20px
+  font-weight: 700
+  text-transform: uppercase
+  color: $bg-light
+  text-align: center
+  @include media-breakpoint-down(md)
+    font-size: 12px
+    line-height: 18px

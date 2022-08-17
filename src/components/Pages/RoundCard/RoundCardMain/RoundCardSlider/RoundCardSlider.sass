@@ -1,0 +1,70 @@
+.product-gallery__slider-wrapper
+  width: 100%
+  flex-basis: 50%
+  
+.product-gallery__slider
+  width: 100%
+  .slick-track
+    display: flex !important
+    align-items: stretch
+    justify-content: flex-start
+  .slick-slide
+    height: auto
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    div
+      &:first-child 
+        height: 100%
+
+.product-slide__item-wrapper
+  border-top: $solid
+  padding: 40px
+  // max-height: 450px
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+
+.product-slide__item-image
+  // height: 400px !important
+  // width: auto !important
+  height: 100%
+  width: 100%
+  @include media-breakpoint-down(lg)
+    height: calc( 360px + (460 - 360) * ((100vw - 992px) / (1440 - 992))) !important
+  img
+    @include media-breakpoint-down(lg)
+      object-fit: contain !important
+      object-position: center !important
+
+.product-gallery__slider-wrapper
+  border-bottom: $solid
+  border-left: $solid
+  @include media-breakpoint-down(lg)
+    // border-bottom: none
+    border-right: $solid
+
+// .product-gallery__slider
+
+.slick-active + .slick-active
+  .product-slide__item-wrapper
+    @include media-breakpoint-down(lg)
+      border-left: $solid
+    @include media-breakpoint-down(sm)
+      border-left: none
+
+.slider__button_arrow
+  &--card
+    margin-bottom: 40px
+    margin-top: 40px
+    display: none
+    @include media-breakpoint-down(lg)
+      display: flex
+      border: $solid
+    .slider-button__prev
+      border-right: none
+    .slider-button__next
+      border-left: $solid

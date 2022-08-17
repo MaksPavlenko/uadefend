@@ -1,0 +1,17 @@
+.section-ui__wrapper
+  padding: 60px 
+  margin-bottom: 60px
+  border: $solid
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 20px + (60 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(sm)
+    padding: 0
+    margin: 0
+    padding: 45px 0
+    border: none
+    border-bottom: 1px dashed rgba($black, .5)
+    // border-top: $solid
+    &:last-child
+      // border-top: 1px dashed rgba($black, .5)
+    &:first-child
+      padding-top: 0

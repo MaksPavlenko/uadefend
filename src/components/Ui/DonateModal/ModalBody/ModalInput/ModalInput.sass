@@ -1,0 +1,244 @@
+
+.input-animate__container
+  width: 100%
+  // overflow-x: hidden
+  &:last-child
+    @include media-breakpoint-down(sm)
+      margin-top: 40px
+  &.is-phone
+    position: relative
+    z-index: 100 !important
+  &.is-anonymous
+    cursor: not-allowed !important
+
+.modal-input__wrapper
+  width: 100%
+  display: flex
+  flex-direction: column
+  opacity: 0
+  transform: translateX(-100%)
+
+.modal-input__header
+  display: grid
+  grid-template-columns: 3fr 9fr
+  gap: 40px
+  @include media-breakpoint-down(xl)
+    gap: 20px
+  @include media-breakpoint-down(lg)
+    gap: 40px
+  @include media-breakpoint-down(md)
+    gap: 20px
+  @include media-breakpoint-down(sm)
+    grid-template-columns: 1fr
+    // height: auto
+    .form-label
+      order: 2
+
+.pay-mode__wrapper
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 20px
+  @include media-breakpoint-down(lg)
+    justify-content: flex-start
+  @include media-breakpoint-down(sm)
+    margin-bottom: 40px
+    order: 1
+
+.pay-mode__button
+  display: flex
+  align-items: center
+  cursor: pointer
+  &:last-child
+    @include media-breakpoint-down(lg)
+      margin-left: 20px
+  
+
+.pay-mode__button--title
+  display: inline-block
+  font-family: $text
+  font-size: 12px
+  line-height: 12px
+  font-weight: 400
+  text-align: left
+  @include media-breakpoint-down(sm)
+    width: calc(100% - 30px)
+
+
+.pay-mode__button--check
+  display: block
+  position: relative
+  width: 20px
+  height: 20px
+  border: $solid
+  margin-right: 10px
+  @include media-breakpoint-down(sm)
+    width: 30px
+    height: 30px
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 8px
+    height: 8px
+    border: $solid
+    @include media-breakpoint-down(sm)
+      width: 10px
+      height: 10px
+  &.is-active
+    &::before
+      border: 1px solid $black
+      background: $black
+
+
+.form-label
+  font-size: 24px
+  line-height: 100%
+  font-weight: 700
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  margin-bottom: 20px
+
+.modal-input
+  height: 60px
+  background: transparent
+  padding-left: 20px
+  border: $solid
+  border-radius: 0 !important
+  outline: none
+  font-family: $text
+  font-size: 15px
+  line-height: 15px
+  font-weight: 400
+  color: $black
+  &::placeholder
+    color: $gray
+  &:focus
+    border-color: $gray
+.modal-input
+  &__payment--wrapper,  &__submit--wrapper
+    border: none
+    padding-left: 0
+    display: grid
+    gap: 40px
+    @include media-breakpoint-down(xl)
+      gap: 20px
+    @include media-breakpoint-down(lg)
+      gap: 40px
+    @include media-breakpoint-down(md)
+      gap: 20px
+  &__payment--wrapper
+    grid-template-columns: 6fr 6fr
+    @include media-breakpoint-down(sm)
+      grid-template-columns: 1fr
+      height: auto
+  &__submit--wrapper
+    grid-template-columns: 3fr 9fr
+    @include media-breakpoint-down(sm)
+      grid-template-columns: 1fr
+      height: auto
+  &.is-anonymous
+    pointer-events: none !important
+          
+
+
+.payment-method
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 60px
+  border: $solid
+
+.payment-method__link
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  height: 60px
+  border-bottom: 1px solid $black
+
+.payment-method__link--title
+  font-family: $text
+  font-size: 12px
+  line-height: 12px
+  font-weight: 700
+  text-transform: uppercase
+  color: $black
+
+.payment-method__link--icon
+  width: 14px
+  height: 14px
+
+.modal-input__price--wrapper
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 60px
+  border: $solid
+
+.modal-input__price
+  font-family: $main
+  font-size: 26px
+  line-height: 100%
+  font-weight: 700
+  text-transform: uppercase
+
+.modal-input__price--currency
+  margin-left: 5px
+
+.modal-input__button
+  width: 100%
+  height: 60px
+  display: flex
+  align-items: center
+  justify-content: center
+  border: 1px solid $black
+
+.modal-input__button--title
+  display: inline-block
+  font-size: 12px
+  line-height: 12px
+  font-weight: 700
+  text-transform: uppercase
+  color: $black
+  margin-right: 20px
+
+.modal-input__button--icon
+  width: 14px
+  height: 14px
+
+.modal-input__phone
+  padding-left: 0
+  .form-control 
+    width: 100% !important
+    height: 60px !important
+    background: transparent !important
+    border: none !important
+    border-radius: 0px !important
+    padding-left: 60px !important
+  .flag-dropdown 
+    width: 60px !important
+    display: flex !important
+    align-items: center !important
+    justify-content: center !important
+    border-radius: 0 !important
+    border: none !important
+    background: transparent !important
+    .selected-flag
+      width: 60px !important
+      padding: 0 0 0 16px !important
+      &:hover, &:focus, &.open
+        background: transparent !important
+        border-radius: 0 !important
+  .country-list 
+    left: 0 !important
+    top: 60px !important
+  
+
+
+    
+  

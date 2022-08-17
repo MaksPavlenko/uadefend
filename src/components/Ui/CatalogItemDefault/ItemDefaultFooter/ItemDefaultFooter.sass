@@ -1,0 +1,81 @@
+$d-padding: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+  
+.item-default__footer
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+ 
+.item-default__price--container
+  display: flex
+  align-items: center
+  justify-content: space-between
+  font-family: $text
+  font-size: 14px
+  line-height: 24px
+  font-weight: 700
+  text-transform: uppercase
+  color: $black
+  width: 100%
+  padding: 16px 40px
+  @media screen and ( max-width: $page-wrapper )
+    padding: 16px $d-padding
+.item-default__price--current
+  font-weight: 700
+  color: $black
+
+.item-default__price--percent
+  font-weight: 700
+  color: $black
+
+.item-default__price--total
+  color: $gray
+
+.item-default__line
+  position: relative
+  width: 100%
+  height: 6px
+
+.item-default__line--total
+  height: 6px
+  width: 100%
+  background: rgba(48, 48, 48, 0.1)
+
+.item-default__line--current
+  height: 6px
+  left: 0
+  background: $black
+  position: absolute
+  left: 0
+  top: 0
+
+.item-default__title
+  font-family: $text
+  font-size: 15px
+  line-height: 20px
+  font-weight: 500
+  border-top: $solid
+  text-decoration: underline
+  padding: 20px 40px 30px 40px
+  transition: color .3s ease-in-out
+  @include media-breakpoint-down(md)
+    font-size: 15px
+    line-height: 18px
+  @media screen and ( max-width: $page-wrapper )
+    padding: 20px $d-padding 30px $d-padding
+
+.item-default__info
+  display: flex
+  align-items: center
+  justify-content: space-between
+  font-family: $text
+  font-size: 11px
+  font-weight: 500
+  text-transform: uppercase
+  color: #999
+  padding: 0 0 15px 0
+  border-bottom: $solid
+
+.item-default__info--category
+  font-weight: 700
+  // color: #999
+  color: $black

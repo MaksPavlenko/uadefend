@@ -1,0 +1,58 @@
+.text-section
+  &__counts-wrapper
+    @include flex()
+    flex-direction: row
+    justify-content: space-around
+    height: 25%
+    width: 100%
+    border-bottom: $solid
+    @include media-breakpoint-down(lg)
+      flex-direction: column
+      padding-bottom: 5%
+      padding-top: 5%
+      height: 160px
+      @include flex-center()
+    @include media-breakpoint-down(sm)
+      height: 130px
+  &__count-text
+    font-family: $main
+    font-style: normal
+    font-weight: 700
+    font-size: 28px
+    line-height: 28px
+    color: $black
+    white-space: pre-line
+    @include flex()
+    align-items: center
+    flex-basis: 80%
+    padding: 25px
+    text-transform: uppercase
+    @include media-breakpoint-down(lg)
+      text-align: center
+      padding: 0
+      flex-basis: 50%
+    @include media-breakpoint-down(sm)
+      padding: 0 20px
+    @media screen and ( max-width: $page-wrapper )
+      font-size: calc( 20px + (28 - 20) * ((100vw - 320px) / (1440 - 320)))
+      line-height: calc(18px + (28 - 18) * ((100vw - 320px) / (1440 - 320)))
+  &__count-data
+    font-family: $main
+    font-style: normal
+    font-weight: 700
+    font-size: 60px
+    line-height: 44px
+    text-transform: uppercase
+    color: $gray
+    border-right: $solid
+    @include flex-center()
+    flex-basis: 20%
+    @media screen and ( max-width: $page-wrapper )
+      font-size: calc( 30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)))
+      line-height: calc(30px + (44 - 30) * ((100vw - 320px) / (1440 - 320)))
+    @include media-breakpoint-down(lg)
+      padding-top: 0
+      padding-bottom: 15px
+      border-right: none
+    @include media-breakpoint-down(md)
+      padding-bottom: 0

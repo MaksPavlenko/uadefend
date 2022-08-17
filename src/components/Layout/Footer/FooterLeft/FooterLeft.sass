@@ -1,0 +1,44 @@
+@import './FooterAdress/FooterAdress'
+@import './FooterMail/FooterMail'
+  
+.footer__item
+  width: 33.33%
+  @include flex()
+  flex-direction: column
+  border-top: $solid
+  border-bottom: $solid
+  @include media-breakpoint-down(lg)
+    width: 100%
+    border-top: none
+
+.adress-content
+  @include media-breakpoint-down(lg)
+    @include flex-column()
+    height: auto
+    border-top: $solid
+
+.footer-left
+  &__wrapper
+    border-right: $solid
+    @include media-breakpoint-down(lg)
+      border-left: $solid
+  &__title-container
+    height: 120px
+    @include flex()
+    align-items: center
+    border-bottom: $solid
+    @include media-breakpoint-down(lg)
+      border-top: $solid
+      border-bottom: none
+      @include flex-center() 
+  &__title
+    font-family: $main
+    font-style: normal
+    font-weight: 700
+    font-size: 60px
+    line-height: 40px
+    text-transform: uppercase
+    color: $black
+    @media screen and ( max-width: $page-wrapper )
+      font-size: calc( 30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)))
+  

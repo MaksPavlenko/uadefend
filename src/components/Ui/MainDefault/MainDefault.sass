@@ -1,0 +1,36 @@
+.main-default
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-top: 180px
+  padding-bottom: 110px
+  // border-bottom: $solid
+  @media screen and ( max-width: $page-wrapper )
+    padding-top: calc( 100px + (180 - 100) * ((100vw - 320px) / (1440 - 320)))
+    padding-bottom: calc( 20px + (90 - 20) * ((100vw - 320px) / (1440 - 320)))
+  &.is-column
+    @include media-breakpoint-down(md)
+      flex-direction: column
+      align-items: flex-start
+      .main-default__left, .main-default__right
+        width: 100%
+
+
+
+.main-default__left, .main-default__right
+  opacity: 0
+  transform: translateY(100px)
+  
+
+.main-default__line
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 1px
+  background: rgba($black, 0.15)
+  transform-origin: left
+  transform: scaleX(0)
+  
+

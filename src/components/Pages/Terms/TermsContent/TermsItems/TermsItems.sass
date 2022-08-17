@@ -1,0 +1,47 @@
+@import './TermsListItem/TermsListItem'
+
+$padding_x: calc( 20px + (60 - 20) * ((100vw - 320px) / (1440 - 320)))
+$padding_y: calc( 10px + (30 - 10) * ((100vw - 320px) / (1440 - 320)))
+
+.terms-items__wrapper
+  padding: 30px 60px
+  border: $solid
+  opacity: 0
+  @media screen and ( max-width: $page-wrapper )
+    padding: $padding_y $padding_x
+  @include media-breakpoint-down(lg)
+    margin-bottom: 90px
+  @include media-breakpoint-down(sm)
+    border: none
+    padding: 0
+  .default-article__wrapper
+    .default-article__title
+      font-weight: 400
+    .default-article__description
+      @media screen and ( max-width: $page-wrapper )
+        margin-top: calc( 15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)))
+      p
+        font-family: $text
+        font-weight: 400
+        font-style: normal
+        font-size: 15px
+        line-height: 130%
+        color: $black
+
+.terms-list
+  padding-top: 30px
+  @media screen and ( max-width: $page-wrapper )
+    padding-top: calc( 15px + (30 - 15) * ((100vw - 320px) / (1440 - 320))) 
+  
+.terms-list__items
+  list-style: none
+  padding-bottom: 15px
+  &:last-child
+    padding-bottom: 0
+
+.terms-list__item
+  font-size: 15px
+  
+.terms-items__wrapper
+  
+

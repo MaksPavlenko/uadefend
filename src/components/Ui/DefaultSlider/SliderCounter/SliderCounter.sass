@@ -1,0 +1,36 @@
+.number-slider__counter
+  flex-basis: 33.33%
+  align-items: center
+  justify-content: center
+  height: 100%
+  width: 100%
+  @include flex()
+  @include media-breakpoint-down(lg)
+    display: none
+
+.number-slider__counter-current
+  font-family: $main
+  font-style: normal
+  font-weight: 700
+  font-size: 28px
+  line-height: 24px
+  text-align: center
+  text-transform: uppercase
+  color: $black
+  padding-right: 6px
+  letter-spacing: 0.04em
+
+.number-slider__counter-separator
+  padding-right: 6px
+
+.number-slider__counter-separator,
+.number-slider__counter-total
+  font-family: $main
+  font-style: normal
+  font-weight: 600
+  font-size: 18px
+  line-height: 24px
+  text-align: center
+  text-transform: uppercase
+  color: $black
+  letter-spacing: 0.04em

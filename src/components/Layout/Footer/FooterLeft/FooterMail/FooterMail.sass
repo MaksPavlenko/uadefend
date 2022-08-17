@@ -1,0 +1,27 @@
+.footer-left
+  &__mail-container
+    height: 120px
+    @include flex()
+    justify-content: flex-start
+    align-items: center
+    cursor: pointer
+    @include media-breakpoint-down(lg)
+      @include flex-center()
+      border-top: $solid
+  &__mail-item
+    @include flex()
+    justify-content: start
+    align-self: center
+    align-items: center
+    height: 100%
+  &__mail-link_title
+    font-family: $text
+    font-style: normal
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    color: $black
+    &:hover
+      color: $gray
+    @media screen and ( max-width: $page-wrapper )
+      font-size: calc( 14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)))

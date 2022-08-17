@@ -1,0 +1,37 @@
+.about-content__wrapper
+  width: 100%
+  height: auto
+  border: $solid
+  background: $gray-bag
+  // background: $bg-light
+  padding: 60px
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 20px + (60 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(md)
+    // margin-bottom: 10px
+
+.about-content__title
+  font-family: $main
+  font-style: normal
+  font-weight: 700
+  font-size: 40px
+  line-height: 40px
+  text-transform: uppercase
+  color: $black
+  padding-bottom: 20px
+  white-space: pre-wrap
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 24px + (40 - 24) * ((100vw - 320px) / (1440 - 320)))
+    line-height: calc(24px + (40 - 24) * ((100vw - 320px) / (1440 - 320)))
+
+.about-content__descr
+  font-family: $text
+  font-style: normal
+  font-weight: 400
+  font-size: 15px
+  line-height: 20px
+  color: $black
+  white-space: pre-wrap
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 14px + (15 - 14) * ((100vw - 320px) / (1440 - 320)))
+    line-height: calc(18px + (20 - 18) * ((100vw - 320px) / (1440 - 320)))

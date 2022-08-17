@@ -1,0 +1,74 @@
+@import './HeaderCallPhones/HeaderCallPhones'
+@import './HeaderCallMessengers/HeaderCallMessengers'
+  
+.call-wrapper
+  width: 50%
+  height: 100%
+  position: relative
+  @media (any-hover: hover)
+    &:hover
+      .header-call__bg
+        transform: scaleY(1)
+      .call-list__bg
+        transform: scaleY(1)
+      .call-list
+        pointer-events: auto
+        box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.15)
+        transition: box-shadow .3s cubic-bezier(0.24, 0.4, 0, 1) .3s
+      .call-phone__item
+        border-color: rgba($black, .15)
+        transition: border-color .3s cubic-bezier(0.24, 0.4, 0, 1) .2s
+        &:last-child
+          border-color: rgba($black, .15)
+      .call-phone__item-link
+        transform: translateY(0)
+        opacity: 1
+      .call-messengers__item
+        transform: translateY(0)
+        opacity: 1
+
+
+  
+  
+
+.call-button
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+  border-left: $solid
+  // transition: background .3s cubic-bezier(0.24, 0.4, 0, 1)
+  
+
+
+.header-call__bg, .call-list__bg
+  position: absolute
+  top: 0
+  left: 1px
+  right: 0
+  height: 100%
+  background: #eee
+  transition: transform .3s cubic-bezier(0.24, 0.4, 0, 1)
+
+.header-call__bg
+  // transform: translateY(100%)
+  transform-origin: bottom
+  transform: scaleY(0)
+
+.call-list__bg
+  transform: scaleY(0)
+  transform-origin: top
+  transition: transform .3s cubic-bezier(0.24, 0.4, 0, 1)
+
+.call-list
+  position: absolute
+  top: 99px
+  left: 0
+  width: 100%
+  // box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.15)
+  pointer-events: none
+  transition: box-shadow .3s cubic-bezier(0.24, 0.4, 0, 1)
+  @include media-breakpoint-down(md)
+    top: 86px

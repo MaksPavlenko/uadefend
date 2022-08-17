@@ -1,0 +1,119 @@
+@import './HeaderCall/HeaderCall'
+@import './HeaderAction/HeaderAction'
+@import './Burger/Burger'
+@import './Navigation/Navigation'
+  
+.header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 100
+  opacity: 0
+  transform: translateY(-100%)
+  .page-wrapper
+    @include media-breakpoint-down(sm)
+      padding: 0
+  &.is-scroll
+    .logo-wrapper
+      transform: translateX(20px)
+      transition: transform .3s ease-in-out .2s
+
+  
+
+
+.header-background__main
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: linear-gradient(180deg, #96C9F0 0%, #A5CDE1 100%)
+  opacity: 0
+  overflow: hidden
+  &.is-light
+    background: #e7e7e7
+    .noise
+      display: none
+
+.header-background
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  transform: scaleY(0)
+  transform-origin: top
+
+.header-line
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  height: 1px
+  background: rgba($black, .15)
+  @include media-breakpoint-down(sm)
+    left: 20px
+    right: 20px
+
+.header-container
+  position: relative
+  display: grid
+  grid-template-columns: 4fr 4fr 4fr
+  width: 100%
+  height: 100px
+  @include media-breakpoint-down(lg)
+    grid-template-columns: 6fr 6fr
+    // height: 80px
+  @include media-breakpoint-down(md)
+    grid-template-columns: 4fr 8fr
+    height: 80px
+  @include media-breakpoint-down(sm)
+    grid-template-columns: 5fr 7fr
+
+.header-item
+  display: flex
+  align-items: center
+  position: relative
+  z-index: 1
+  &__first
+    // transition: padding .4s cubic-bezier(.32,1,.32,1) .8s
+  &__second
+    justify-content: space-between
+    @include media-breakpoint-down(lg)
+      display: none
+  &__third
+    justify-content: flex-start
+    @include media-breakpoint-down(sm)
+      justify-content: flex-end
+      padding-right: 20px
+
+.logo-wrapper
+  display: flex
+  align-items: center
+  transform: translateX(0)
+  transition: transform .3s ease-in-out .8s
+  @include media-breakpoint-down(sm)
+    transform: translateX(20px)
+
+.logo
+  width: 165px
+  height: auto
+  @media screen and ( max-width: $page-wrapper )
+    width: calc( 124px + (165 - 124) * ((100vw - 320px) / (1440 - 320)))
+
+.header-logo__text
+  font-family: $text
+  font-style: normal
+  font-weight: 700
+  font-size: 13px
+  line-height: 100%
+  color: #303030
+  white-space: pre-wrap
+  margin-left: 25px
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 11px + (13 - 11) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(md)
+    display: none
+
+

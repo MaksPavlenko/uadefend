@@ -1,0 +1,96 @@
+@import './MainText/MainText'
+@import './Tree/Tree'
+    
+.home-main
+  position: relative
+  width: 100%
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  padding: 100px 0
+  @include media-breakpoint-down(lg)
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 120px 0 100px 0
+  
+
+.home-main__container
+  width: 100%
+  display: grid
+  grid-template-columns: 6fr 6fr
+  @include media-breakpoint-down(lg)
+    grid-template-columns: 1fr
+
+
+.main-cover__wrapper
+  width: 50%
+  height: auto
+  position: absolute
+  bottom: 15%
+  right: 0
+  @include media-breakpoint-down(xl)
+    width: 55%
+    bottom: 17%
+  @include media-breakpoint-down(lg)
+    position: relative
+    bottom: -20px
+    right: auto
+    width: calc( 242px + (400 - 242) * ((100vw - 320px) / (992 - 320)))
+  @include media-breakpoint-down(md)
+    bottom: auto
+
+.main-counter__wrapper
+  display: flex
+  justify-content: flex-end
+  align-items: flex-end
+  overflow: hidden
+  @include media-breakpoint-down(lg)
+    display: none
+
+.main-counter
+  display: flex
+  border: 1px solid $black
+  opacity: 0
+  // transform: translateX(100%)
+  @include media-breakpoint-down(sm)
+    width: 100%
+    border: 1px solid rgba(48, 48, 48, 0.15)
+
+
+.main-counter__count
+  padding: 15px 30px
+  border-right: 1px solid $black
+  @include media-breakpoint-down(sm)
+    width: 40%
+    @include flex-center()
+    border-right: 1px solid rgba(48, 48, 48, 0.15)
+ 
+
+.main-counter__value
+  font-family: $main
+  font-size: 60px
+  line-height: 60px
+  font-weight: 700
+
+  
+.main-counter__title--wrapper
+  height: 100%
+  @include flex-center()
+  text-align: center
+  @include media-breakpoint-down(sm)
+    width: 100%
+
+.main-counter__title
+  font-family: $main
+  font-style: normal
+  line-height: 24px
+  text-align: center
+  letter-spacing: 0.02em
+  font-size: 24px
+  text-transform: uppercase
+  font-weight: 700
+  padding: 20px
+  white-space: pre-wrap
+  

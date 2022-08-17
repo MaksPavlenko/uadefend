@@ -1,0 +1,82 @@
+.accordion-item
+  margin-bottom: 20px
+  border: $solid
+  border-bottom-color: transparent
+  position: relative
+  &:last-child
+    margin-bottom: 0
+
+.accordion-content
+  padding: 40px
+  border-bottom: $solid
+  display: none
+  &.is-active
+    display: block
+    border-top-color: transparent
+  @include media-breakpoint-down(sm)
+    padding: 30px 20px
+
+.accordion-button
+  position: relative
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 40px
+  border-bottom: $solid
+  color: none !important
+  box-shadow: none !important
+  cursor: pointer
+  @include media-breakpoint-down(md)
+    padding: 30px
+  @include media-breakpoint-down(sm)
+    padding: 30px 20px
+  @media (any-hover: hover)
+    &:hover
+      .accordion-button__title--wrapper
+        transform: translateX(15px)
+      .accordion-button__plus
+        transform: translateX(-15px)
+  
+
+.accordion-button__title--wrapper
+  width: calc(100% - 20px)
+  padding-right: 30px
+  text-align: left
+  transition: transform .3s $cubic
+  @include media-breakpoint-down(sm)
+    padding-right: 15px
+
+.accordion-button__title
+  font-family: $text
+  font-size: 14px
+  line-height: 20px
+  font-weight: 700
+  color: $black
+  text-transform: uppercase
+  @include media-breakpoint-down(sm)
+    font-size: 12px
+
+.accordion-button__plus
+  width: 20px
+  height: 20px
+  position: relative
+  transition: transform .3s $cubic
+  &.is-active
+    .button-plus__line
+      &:last-child
+        display: none
+
+.button-plus__line
+  display: block
+  @include absolute-center()
+  background: $black
+  &:first-child
+    width: 20px
+    height: 2px
+  &:last-child
+    width: 2px
+    height: 20px
+  @include media-breakpoint-down(md)
+    width: 18px
+    height: 18px

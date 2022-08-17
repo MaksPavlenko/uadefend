@@ -1,0 +1,36 @@
+.roundCard-donat__marker
+  font-family: $text
+  font-style: normal
+  font-weight: 700
+  font-size: 12px
+  line-height: 12px
+  text-transform: uppercase
+  color: $gray
+  padding-bottom: 25px
+
+.roundCard-donat__title
+  font-family: $main
+  font-style: normal
+  font-weight: 700
+  font-size: 30px
+  line-height: 100%
+  text-transform: uppercase
+  color: $black
+  padding-bottom: 30px
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(lg)
+    font-size: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+
+  
+
+
+.roundCard-donat__wrapper
+  .item-default__price--container
+    font-family: $main
+    font-weight: 700
+    font-size: 30px
+    line-height: 40px
+    @include media-breakpoint-down(sm)
+      font-size: 24px
+      line-height: 34px

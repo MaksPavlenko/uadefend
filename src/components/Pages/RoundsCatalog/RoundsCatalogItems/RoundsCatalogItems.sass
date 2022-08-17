@@ -1,0 +1,124 @@
+.catalog-items
+  border: $solid
+  border-left: none
+  border-bottom: none
+  display: grid
+  grid-template-columns: 6fr 6fr
+  grid-template-rows: 1fr
+  margin-top: 60px
+  opacity: 0
+  transform: translateY(100px)
+  &.catalog-items__list
+    grid-template-columns: 1fr
+    .rounds-item__wrapper--odd
+      display: none
+  @media screen and ( max-width: $page-wrapper )
+    margin-top: calc( 30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)))
+  @include media-breakpoint-down(sm)
+    grid-template-columns: 1fr
+
+
+  
+
+.rounds-item__wrapper
+  border-left: $solid
+  border-bottom: $solid
+  .item-default__header
+    @media screen and ( max-width: $page-wrapper )
+      height: calc( 200px + (288 - 200) * ((100vw - 992px) / (1440 - 992))) !important
+    @include media-breakpoint-down(lg)
+      height: calc( 98px + (316 - 98) * ((100vw - 320px) / (992 - 320))) !important
+    @include media-breakpoint-down(sm)
+      height: calc( 200px + (350 - 200) * ((100vw - 320px) / (576 - 320))) !important
+
+.media-catalog__pagination--wrapper
+  padding: 40px 0
+  margin-top: 90px
+  border-top: $solid
+  border-bottom: $solid
+  @include media-breakpoint-down(sm)
+    margin-top: 60px
+
+.pagination
+  @extend %relative
+  @extend %width100
+  @extend %flex-center
+
+.pagination__item, .block3, .block3
+  width: 60px
+  height: 60px
+  @extend %flex-center
+  border: $solid
+  margin: 0 10px
+  &--active
+    background: $bg-light
+    border: $bg-light
+    box-shadow: $shadow
+  @media screen and ( max-width: $page-wrapper )
+    width: calc( 40px + (60 - 40) * ((100vw - 320px) / (1440 - 320)))
+    height: calc( 40px + (60 - 40) * ((100vw - 320px) / (1440 - 320)))
+
+.pagination__link 
+  @extend %flex-center
+  @extend %width100
+  @extend %height100
+  font-family: $text
+  font-size: 12px
+  font-weight: 700
+  color: $black
+  transition: color .3s $cubic
+  &--active
+    color: $black
+  @media (any-hover: hover)
+    &:hover
+      color: $gray
+
+.pagination__break
+  height: 100px
+  width: 100px
+  @extend %flex-center
+  @media screen and ( max-width: $page-wrapper )
+    width: calc( 40px + (60 - 40) * ((100vw - 320px) / (1440 - 320)))
+    height: calc( 40px + (60 - 40) * ((100vw - 320px) / (1440 - 320)))
+
+.pagination__break-link
+  font-family: $text
+  font-size: 14px
+  @extend %regular
+  color: $gray-500
+  transition: color .3s $cubic
+  @media (any-hover: hover)
+    &:hover
+      color: $gray
+
+.pagination__previous
+  @extend %absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 0
+  @include media-breakpoint-down(sm)
+    display: none
+  .slider-button__wrapper
+    @include media-breakpoint-down(lg)
+      @include default-bg()
+      .button__decor
+        display: block
+  .button__arrow-icon, .button__arrow
+    @include media-breakpoint-down(lg)
+      width: 18px
+
+.pagination__next
+  @extend %absolute
+  top: 50%
+  transform: translateY(-50%)
+  right: 0
+  @include media-breakpoint-down(sm)
+    display: none
+  .slider-button__wrapper
+    @include media-breakpoint-down(lg)
+      @include default-bg()
+      .button__decor
+        display: block
+  .button__arrow-icon, .button__arrow
+    @include media-breakpoint-down(lg)
+      width: 18px
